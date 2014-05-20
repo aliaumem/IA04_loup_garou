@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+        android:id="@+id/nomTab"
+        android:layout_width="match_parent"
+        android:layout_height="65dip" >
+        <TextView 
+            android:id="@+id/textNomTable"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="@string/tableName"/>
+		<EditText
+			android:id="@+id/NomTable"
+			android:layout_height="match_parent"
+			android:layout_width="890dip"
+			android:singleLine="true"
+			android:layout_below="@+id/textNomTable"
+			android:inputType="text">
+		</EditText>
+    </RelativeLayout>
+    
+    <RelativeLayout
+       android:id="@+id/IPField"
+       android:layout_width="match_parent"
+       android:layout_height="65dip"
+       android:orientation="horizontal" 
+       android:layout_below="@+id/nomTab">
+        <TextView 
+            android:id="@+id/textIP"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="@string/tableIP"/>
+		<EditText
+		        android:id="@+id/IP"
+		        android:layout_height="match_parent"
+		        android:layout_width="match_parent"
+		        android:singleLine="true"
+		        android:layout_below="@+id/textIP"
+		        android:inputType="text">
+		</EditText>
+
+  	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/createEditLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <!-- TOP BAR -->
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal" >
+
+        <!-- tag et bouttons-->
+        <TextView 
+            android:id="@+id/textTag"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="@string/tags"
+	    	android:textStyle="bold"
+	    	android:textColor="#FF0000"
+	    	android:gravity="center"
+	    	android:layout_marginLeft="10dip"
+	    />
+		<MultiAutoCompleteTextView
+		        android:id="@+id/tagMultiTextView"
+		        android:layout_height="match_parent"
+		        android:layout_width="890dip"
+		        android:singleLine="true"
+		        android:layout_toRightOf="@+id/textTag"
+		        android:hint="@string/hintTag"
+		        >
+		</MultiAutoCompleteTextView>
+		<Button android:id="@+id/delete"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:layout_toLeftOf="@+id/save"
+		    android:text="@string/delete" />
+
+		
+		<Button android:id="@+id/save"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:layout_alignParentRight="true"
+		    android:text="@string/save" />
+		
+    </RelativeLayout>
+    
+     <!-- Titre -->
+
+    <RelativeLayout
+       android:id="@+id/titleBar"
+       android:layout_width="match_parent"
+       android:layout_height="50dip"
+       android:orientation="horizontal" 
+       android:layout_below="@+id/topBar">
+        <TextView 
+            android:id="@+id/textTitle"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="@string/title"
+	    	android:textStyle="bold"
+	    	android:textColor="#FF0000"
+	    	android:gravity="center"
+	    	android:layout_marginLeft="10dip"
+	    />
+		<EditText
+		        android:id="@+id/editTitle"
+		        android:layout_height="match_parent"
+		        android:layout_width="890dip"
+		        android:singleLine="true"
+		        android:layout_toRightOf="@+id/textTitle"
+		        android:hint="@string/hintTitle">
+		</EditText>
+		<Spinner 
+	        android:id="@+id/spinner"
+	        android:layout_width="190dip"
+	        android:layout_height="match_parent"
+	         android:layout_toLeftOf="@+id/addSession"
+	    />
+		<Button android:id="@+id/addSession"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:layout_alignParentRight="true"
+		    android:text="@string/sessionCreate" />
+
+  	</RelativeLayout>
+    
+
+    <!-- Text Zone -->
+    
+    <RelativeLayout
+	    android:id="@+id/contentZone"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_below="@+id/titleBar">
+		
+        <!-- EditZone-->
+        
+		<EditText
+	        android:id="@+id/editContent"
+	        android:layout_height="match_parent"
+	        android:layout_width="match_parent"
+	        android:gravity="top"
+	        android:hint="@string/hintContent">
+		</EditText>
+		
+	</RelativeLayout>
+	
+    
+
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+!SESSION 2012-05-02 16:01:22.728 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_30
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Users\Gaetan\Documents\UTC\GI03\NF28\AndroTat\AndroTatSVN\trunk\AndroTat\src
+
+!ENTRY org.eclipse.ui 4 4 2012-05-02 16:02:00.140
+!MESSAGE Invalid preference page path: XML Syntax

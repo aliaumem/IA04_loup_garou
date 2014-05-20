@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">AndroTat</string>
+    <string name="empty"></string>
+    
+    <string name="pdf">PDF</string>
+    <string name="tags">Tags</string>
+    <string name="tagsLink">liées au tag</string>
+    <string name="dates">Dates</string>
+    <string name="datesLink">Dates</string>
+    <string name="sessions">Sessions</string>
+    <string name="sessionsLink">de la session</string>
+    <string name="search_title">Rechercher &#8230;</string>
+    <string name="search_hint">Titre ou contenu de la note</string>
+    <string name="selectedCategory">Notes %1$s : "%2$s"</string>
+    <string name="titleNote">Notes %1$s"</string>
+    <string name="add">Ajouter</string>
+    <string name="connect">Connexion</string>
+    <string name="disconnect">Déconnexion</string>
+    <string name="managePostIts">Gerer les Post-its</string>
+    <string name="downloadSummary">Telecharger Resume</string>
+    <string name="titleSelectItem">Selectionnez un Post-It</string>
+    <string name="putNotes">Cliquez ici pour envoyer ces notes à la table</string>
+    <string name="openTable">Open Slider</string>
+    
+    <!-- String Edit And Create Note -->
+    <string name="hintTitle">Titre de la note</string>
+    <string name="hintContent">Contenu de la note</string>
+    <string name="hintTag">Tags associés à la note</string>
+    <string name="save">Enregistrer</string>
+    <string name="delete">Supprimer</string>
+    <string name="confirm">Confirmer</string>
+    
+    <string name="sessionName">Nom de la session :</string>
+    <string name="tableName">Nom de la table :</string>
+    <string name="tableIP">IP de la table :</string>
+    <string name="title">Titre :</string>
+    <string name="sessionCreate">Créer Session</string>
+    
+    <string name="confirmTagDelete">Etes-vous sûr de vouloir supprimer ce tag? \n
+        Il sera également retiré de tous les Post-Its taggués.</string>
+        
+    <string name="confirmTableDelete">Etes-vous sûr de vouloir supprimer cette table ?</string>
+    
+    <string name="confirmNoteDelete">Etes-vous sûr de vouloir supprimer cette note ?</string>
+    
+    
+    <string name="tableParameters">Paramètres de la table</string>
+    <string name="editDone">Modifications terminées</string>
+    
+    <string name="cancel">Annuler</string>
+    
+        <!-- String Edit And Create Note -->
+    <string name="tablePostIts">Posts it de la table</string>
+    
+    <string name="table_prompt">Tables..</string>
+    
+
+    <!-- DEPRECATED  
+    <string name="wip">Work in progress</string>
+    <string name="dicta">dicta</string>
+    <string name="noteTags">Tags :</string>
+     -->
+    
+    
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	<item android:id="@+id/search"
+          android:title="@string/search_title"
+          android:showAsAction="ifRoom"
+          android:actionViewClass="android.widget.SearchView" />
+	<item android:title="Sélectionner tout" 
+	    android:id="@+id/itemSelect"  
+	    android:showAsAction="ifRoom" 
+	    android:icon="@drawable/ic_selectall">
+	</item>
+	<item android:title="Ajouter" 
+	    android:id="@+id/itemNew"  
+	    android:showAsAction="ifRoom" 
+	    android:icon="@drawable/ic_new">
+	</item>
+	<item android:title="Supprimer" 
+	    android:id="@+id/itemRemove"  
+	    android:showAsAction="ifRoom" 
+	    android:icon="@drawable/ic_remove">
+	</item>
+	<item android:title="Paramètres" 
+	    android:id="@+id/itemParam" 
+	    android:showAsAction="ifRoom" 
+	    android:icon="@drawable/ic_settings">
+	</item>
+</menu>

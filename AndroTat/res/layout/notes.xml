@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+image/note"
+        android:layout_width="130dip"
+        android:layout_height="130dip"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/titleNote"/>
+
+    <TextView
+        android:id="@+text/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+image/note"
+        android:textColor="@color/dark"
+        android:textSize="16dip"/>
+
+    <TextView
+        android:id="@+text/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+text/title"
+        android:textColor="@color/dark"/>
+
+</RelativeLayout>

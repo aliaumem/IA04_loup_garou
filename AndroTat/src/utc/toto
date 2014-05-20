@@ -1,0 +1,28 @@
+androTat/main/AndroTatActivity.java:204:		AlertDialog alert = builder.create();
+androTat/main/AndroTatActivity.java:370:				AlertDialog alert = builder.create();
+androTat/main/AndroTatActivity.java:484:				AlertDialog alert = builder.create();
+androTat/main/AndroTatActivity.java:641:					agentManager.createPostit(n.getContent());					
+androTat/main/AndroTatActivity.java:863:					Tag tag = dbo.createTag(sTag);
+androTat/main/AndroTatActivity.java:869:		dbo.createNote(n.getTitle(), n.getContent(), n.getAuthor(),n.getSessionId(), tags);
+androTat/main/AndroTatActivity.java:1040:						Tag addedTag = dbo.createTag(tag);
+androTat/main/AndroTatActivity.java:1066:	private void createFile(byte[] ba) throws Exception { 
+androTat/main/AndroTatActivity.java:1180:					createFile(arr);
+androTat/main/CreateEditActivity.java:50:		setContentView(R.layout.create_edit_layout);
+androTat/main/CreateEditActivity.java:173:				dbo.createSession(name);
+androTat/main/CreateEditActivity.java:183:		AlertDialog alert = builder.create();
+androTat/main/CreateEditActivity.java:204:		AlertDialog alert = builder.create();
+androTat/main/ParameterActivity.java:82:		AlertDialog alert = builder.create();
+androTat/main/ParameterActivity.java:88:		tab = dbo.createTable(name, ip);
+androTat/main/ParameterActivity.java:124:		AlertDialog alert = builder.create();
+androTat/model/DbOperations.java:36:	public Note createNote(String title, String content, String author, Long sessionId, ArrayList<Tag> tags) {
+androTat/model/DbOperations.java:182:	public Tag createTag(String name) {
+androTat/model/DbOperations.java:238:	public Session createSession(String name) {
+androTat/model/DbOperations.java:295:	public Table createTable(String name, String ip) {
+tatinpic/agent/pa/AgentManager.java:117:	public synchronized void createPostit(String value) {
+tatinpic/agent/pa/AgentManager.java:118:		agent.createPostit(ContentOntology.formatWorkbenchAgentName(participant), value);
+tatinpic/agent/pa/AndroidPersonalAgent.java:37:	public void createPostit(String toreceiver, String value) {
+tatinpic/model/BrainstormingModel.java:47:	public Klonk createKlonk(Klonk klonk) {
+tatinpic/model/BrainstormingModel.java:54:	public Klonk createKlonkGroup(Klonk klonk, ArrayList<String> refs,
+tatinpic/model/BrainstormingModel.java:162:				createKlonkGroup(k, refs, cb.getType());
+tatinpic/model/BrainstormingModel.java:164:				createKlonk(k);
+tatinpic/semantics/ContentOntology.java:27:	public static String CREATE = "create" ;

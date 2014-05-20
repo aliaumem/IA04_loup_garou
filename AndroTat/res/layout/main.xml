@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- BANDEAU DE GAUCHE -->
+
+    <RelativeLayout
+        android:id="@+id/leftMenu"
+        android:layout_width="250dip"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!-- Boutons de sections -->
+
+        <TableLayout
+            android:id="@+id/buttonSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:stretchColumns="0,1" >
+
+            <TableRow android:id="@+id/tableRow1" >
+
+                <Button
+                    android:id="@+id/buttonPdf"
+                    android:text="@string/pdf" />
+
+                <Button
+                    android:id="@+id/buttonSessions"
+                    android:text="@string/sessions" />
+            </TableRow>
+
+            <TableRow android:id="@+id/tableRow2" >
+
+                <Button
+                    android:id="@+id/buttonTags"
+                    android:text="@string/tags" />
+
+                <Button
+                    android:id="@+id/buttonDates"
+                    android:text="@string/dates" />
+            </TableRow>
+        </TableLayout>
+        <!-- Liste des resultats -->
+         <ListView
+            android:id="@+id/listPDF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/buttonSelection"
+            android:background="@color/grey"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listSessions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/buttonSelection"
+            android:background="@color/grey"
+            android:visibility="visible" />
+
+        <ListView
+            android:id="@+id/listDates"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/buttonSelection"
+            android:background="@color/grey"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listTags"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/buttonSelection"
+            android:background="@color/grey"
+            android:longClickable="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- Bandeau central, liste des post-its -->
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/leftMenu"
+        android:background="@color/lightgrey"
+        android:orientation="vertical" >
+
+        <!-- Section en cour -->
+
+        <TextView
+            android:id="@+id/titleSelection"
+            android:layout_width="930dip"
+            android:layout_height="45dip"
+            android:background="@color/darkgrey"
+            android:gravity="center"
+            android:text="@string/titleSelectItem"
+            android:textSize="25sp" />
+
+        <!-- Liste des post-its -->
+
+        <GridView
+            android:id="@+id/listNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/titleSelection"
+            android:layout_below="@id/titleSelection"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="20dip"
+            android:columnWidth="130dip"
+            android:gravity="center"
+            android:horizontalSpacing="10dip"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dip" />
+
+        <!-- Boutton ajouter -->
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/slidingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <SlidingDrawer
+                android:id="@+id/slidingDrawerTable"
+                android:layout_width="340dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:content="@+id/contentSlider"
+                android:handle="@+id/openConnectTable"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/openConnectTable"
+                    android:layout_width="70dip"
+                    android:layout_height="170dip"
+                    android:background="@drawable/rounded_imagebutton"
+                    android:src="@drawable/opentablelogo"
+                    android:contentDescription="@string/openTable"/>
+                
+                <LinearLayout
+                    android:id="@+id/contentSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:orientation="vertical" >
+
+                    <Spinner
+                        android:id="@+id/tableSpinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dip"
+                        android:prompt="@string/table_prompt" />
+
+                    <Button
+                        android:id="@+id/connectTable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dip"
+                        android:text="@string/connect" />
+
+                    <LinearLayout
+                        android:id="@+id/contentConnectedSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" 
+                        android:visibility="invisible" >
+
+                        <Button
+                            android:id="@+id/downloadSummary"
+                            android:layout_width="fill_parent"
+                            android:layout_height="60dip"
+                            android:drawableRight="@drawable/downloadsummary"
+                            android:text="@string/downloadSummary"
+                            />
+
+                        <Button
+                            android:id="@+id/managePostIts"
+                            android:layout_width="fill_parent"
+                            android:layout_height="60dip"
+                            android:drawableRight="@drawable/managepostits"
+                            android:text="@string/managePostIts"
+                            />
+
+                        <TextView
+                            android:id="@+id/tableArea"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="10dip"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_marginTop="10dip"
+                            android:background="@drawable/rounded_textview"
+                            android:drawableBottom="@drawable/table"
+                            android:gravity="center"
+                            android:text="@string/putNotes"
+                            android:textColor="@color/black"
+                            android:textSize="30sp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </SlidingDrawer>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

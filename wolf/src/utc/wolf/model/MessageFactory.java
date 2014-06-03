@@ -2,6 +2,9 @@ package utc.wolf.model;
 
 import jade.util.leap.HashMap;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Matthieu Hanne
@@ -10,17 +13,25 @@ import jade.util.leap.HashMap;
  * To change this template use File | Settings | File Templates.
  */
 public class MessageFactory {
-    private HashMap m_RegisteredProducts = new HashMap();
 
-    public void registerProduct (String MessageType, Class MessageClass)
-    {
-        m_RegisteredProducts.put(MessageType, MessageClass);
+    private static MessageFactory instance = null;
+
+    protected MessageFactory(){/*Exists only to defeat instantiation.*/}
+
+    public static MessageFactory getInstance(){
+        if(instance == null){
+            instance = new MessageFactory();
+        }
+        return instance;
     }
 
-    public Product createProduct(String productID)
-    {
-        Class productClass = (Class)m_RegisteredProducts.get(productID);
-        Constructor productConstructor = cClass.getDeclaredConstructor(new Class[] { String.class });
-        return (Product)productConstructor.newInstance(new Object[] { });
+    private HashMap m_RegisteredMessages = new HashMap();
+
+    public void registerMessage(String MessageID, Message msg)    {
+        m_RegisteredMessages.put(MessageID, msg);
+    }
+
+    public Message createMessage(String MessageID){
+       return  ((Message)m_RegisteredMessages.get(MessageID)).createMessage();
     }
 }
